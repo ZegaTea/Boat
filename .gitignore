@@ -8,6 +8,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+BoatService/db/ConnectDB.cs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -23,6 +24,28 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+
+boat/[Dd]ebug/
+boat/[Dd]ebugPublic/
+boat/[Rr]elease/
+boat/[Rr]eleases/
+boat/x64/
+boat/x86/
+boat/bld/
+boat/[Bb]in/
+boat/[Oo]bj/
+boat/[Ll]og/
+
+BoatService/[Dd]ebug/
+BoatService/[Dd]ebugPublic/
+BoatService/[Rr]elease/
+BoatService/[Rr]eleases/
+BoatService/x64/
+BoatService/x86/
+BoatService/bld/
+BoatService/[Bb]in/
+BoatService/[Oo]bj/
+BoatService/[Ll]og/
 
 # Visual Studio 2015 cache/options directory
 .vs/
