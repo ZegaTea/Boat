@@ -13,3 +13,8 @@ E:\Code-C#\boat\boat\obj\Debug\boat.exe
 E:\Code-C#\boat\boat\obj\Debug\boat.pdb
 E:\Code-C#\boat\boat\obj\Debug\boat.frmMain.resources
 E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmDanhSachTau.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanlyLoaitau.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanlyQuocgia.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanlyTau.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanlyBao.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmToadoBao.resources

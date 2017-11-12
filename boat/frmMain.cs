@@ -147,8 +147,23 @@ namespace boat
 
         private void quanlyTSMI_Click(object sender, EventArgs e)
         {
+            
+            this.Visible = false;
             frmDanhSachTau frm = new frmDanhSachTau();
             frm.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void baoTSMI_Click(object sender, EventArgs e)
+        {
+            frmToadoBao toadoBao = new frmToadoBao();
+            toadoBao.Show();
+        }
+
+        private void quanlyBaoTSMI_Click(object sender, EventArgs e)
+        {
+            frmQuanlyBao quanlyBao = new frmQuanlyBao();
+            quanlyBao.ShowDialog();
         }
     }
 }

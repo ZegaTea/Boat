@@ -95,17 +95,20 @@ namespace boat.GUI
 
         private void quanlytauTSMI_Click(object sender, EventArgs e)
         {
-
+            frmQuanlyTau quanlyTau = new frmQuanlyTau();
+            quanlyTau.ShowDialog();
         }
 
         private void quanlyquocgiaTSMI_Click(object sender, EventArgs e)
         {
-
+            frmQuanlyQuocgia quanlyQuocgia = new frmQuanlyQuocgia();
+            quanlyQuocgia.ShowDialog();
         }
 
         private void quanlyloaitaiTSMI_Click(object sender, EventArgs e)
         {
-
+            frmQuanlyLoaitau quanlyLoaiTau = new frmQuanlyLoaitau();
+            quanlyLoaiTau.ShowDialog();
         }
 
         private void reloadTextBox()

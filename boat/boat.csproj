@@ -74,6 +74,36 @@
     <Compile Include="GUI\frmGuiToaDo.Designer.cs">
       <DependentUpon>frmGuiToaDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmQuanlyBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanlyBao.Designer.cs">
+      <DependentUpon>frmQuanlyBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanlyLoaitau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanlyLoaitau.Designer.cs">
+      <DependentUpon>frmQuanlyLoaitau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanlyQuocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanlyQuocgia.Designer.cs">
+      <DependentUpon>frmQuanlyQuocgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanlyTau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanlyTau.Designer.cs">
+      <DependentUpon>frmQuanlyTau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmToadoBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmToadoBao.Designer.cs">
+      <DependentUpon>frmToadoBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\DTO\HanhtrinhDTO.cs" />
     <Compile Include="Model\DTO\LatLng.cs" />
     <Compile Include="Model\DTO\TauChitietDTO.cs" />
@@ -96,6 +126,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmGuiToaDo.resx">
       <DependentUpon>frmGuiToaDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuanlyBao.resx">
+      <DependentUpon>frmQuanlyBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuanlyLoaitau.resx">
+      <DependentUpon>frmQuanlyLoaitau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuanlyQuocgia.resx">
+      <DependentUpon>frmQuanlyQuocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuanlyTau.resx">
+      <DependentUpon>frmQuanlyTau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmToadoBao.resx">
+      <DependentUpon>frmToadoBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

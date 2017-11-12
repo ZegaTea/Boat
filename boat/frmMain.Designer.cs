@@ -35,10 +35,10 @@
             this.mns = new System.Windows.Forms.MenuStrip();
             this.btnThem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanlyTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.rtbState = new System.Windows.Forms.RichTextBox();
             this.bãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tạoCơnBãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýBãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baoTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.quanlyBaoTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.rtbState = new System.Windows.Forms.RichTextBox();
             this.mns.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,11 +108,41 @@
             this.quanlyTSMI.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.quanlyTSMI.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.quanlyTSMI.Name = "quanlyTSMI";
-            this.quanlyTSMI.Size = new System.Drawing.Size(60, 69);
-            this.quanlyTSMI.Text = "Quản lý";
+            this.quanlyTSMI.Size = new System.Drawing.Size(80, 69);
+            this.quanlyTSMI.Text = "Quản lý tàu";
             this.quanlyTSMI.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.quanlyTSMI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.quanlyTSMI.Click += new System.EventHandler(this.quanlyTSMI_Click);
+            // 
+            // bãoToolStripMenuItem
+            // 
+            this.bãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baoTSMI,
+            this.quanlyBaoTSMI});
+            this.bãoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bãoToolStripMenuItem.Image")));
+            this.bãoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bãoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.bãoToolStripMenuItem.Name = "bãoToolStripMenuItem";
+            this.bãoToolStripMenuItem.Size = new System.Drawing.Size(64, 69);
+            this.bãoToolStripMenuItem.Text = "Cơn bão";
+            this.bãoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bãoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // baoTSMI
+            // 
+            this.baoTSMI.Image = ((System.Drawing.Image)(resources.GetObject("baoTSMI.Image")));
+            this.baoTSMI.Name = "baoTSMI";
+            this.baoTSMI.Size = new System.Drawing.Size(152, 22);
+            this.baoTSMI.Text = "Gửi tọa độ";
+            this.baoTSMI.Click += new System.EventHandler(this.baoTSMI_Click);
+            // 
+            // quanlyBaoTSMI
+            // 
+            this.quanlyBaoTSMI.Image = ((System.Drawing.Image)(resources.GetObject("quanlyBaoTSMI.Image")));
+            this.quanlyBaoTSMI.Name = "quanlyBaoTSMI";
+            this.quanlyBaoTSMI.Size = new System.Drawing.Size(152, 22);
+            this.quanlyBaoTSMI.Text = "Quản lý bão";
+            this.quanlyBaoTSMI.Click += new System.EventHandler(this.quanlyBaoTSMI_Click);
             // 
             // rtbState
             // 
@@ -123,34 +153,6 @@
             this.rtbState.Size = new System.Drawing.Size(218, 444);
             this.rtbState.TabIndex = 5;
             this.rtbState.Text = "-----------------------";
-            // 
-            // bãoToolStripMenuItem
-            // 
-            this.bãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tạoCơnBãoToolStripMenuItem,
-            this.quảnLýBãoToolStripMenuItem});
-            this.bãoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bãoToolStripMenuItem.Image")));
-            this.bãoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bãoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.bãoToolStripMenuItem.Name = "bãoToolStripMenuItem";
-            this.bãoToolStripMenuItem.Size = new System.Drawing.Size(60, 69);
-            this.bãoToolStripMenuItem.Text = "Bão";
-            this.bãoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bãoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tạoCơnBãoToolStripMenuItem
-            // 
-            this.tạoCơnBãoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tạoCơnBãoToolStripMenuItem.Image")));
-            this.tạoCơnBãoToolStripMenuItem.Name = "tạoCơnBãoToolStripMenuItem";
-            this.tạoCơnBãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.tạoCơnBãoToolStripMenuItem.Text = "Tạo cơn bão";
-            // 
-            // quảnLýBãoToolStripMenuItem
-            // 
-            this.quảnLýBãoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýBãoToolStripMenuItem.Image")));
-            this.quảnLýBãoToolStripMenuItem.Name = "quảnLýBãoToolStripMenuItem";
-            this.quảnLýBãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.quảnLýBãoToolStripMenuItem.Text = "Quản lý bão";
             // 
             // frmMain
             // 
@@ -181,8 +183,8 @@
         private System.Windows.Forms.RichTextBox rtbState;
         private System.Windows.Forms.ToolStripMenuItem quanlyTSMI;
         private System.Windows.Forms.ToolStripMenuItem bãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tạoCơnBãoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýBãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baoTSMI;
+        private System.Windows.Forms.ToolStripMenuItem quanlyBaoTSMI;
     }
 }
 
