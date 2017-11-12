@@ -1,0 +1,15 @@
+E:\Code-C#\boat\boat\bin\Debug\boat.exe.config
+E:\Code-C#\boat\boat\bin\Debug\boat.exe
+E:\Code-C#\boat\boat\bin\Debug\boat.pdb
+E:\Code-C#\boat\boat\bin\Debug\GMap.NET.Core.dll
+E:\Code-C#\boat\boat\bin\Debug\GMap.NET.WindowsForms.dll
+E:\Code-C#\boat\boat\bin\Debug\GMap.NET.Core.xml
+E:\Code-C#\boat\boat\bin\Debug\GMap.NET.WindowsForms.xml
+E:\Code-C#\boat\boat\obj\Debug\boat.csprojResolveAssemblyReference.cache
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmGuiToaDo.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.Properties.Resources.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.csproj.GenerateResource.Cache
+E:\Code-C#\boat\boat\obj\Debug\boat.exe
+E:\Code-C#\boat\boat\obj\Debug\boat.pdb
+E:\Code-C#\boat\boat\obj\Debug\boat.frmMain.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmDanhSachTau.resources

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0686fadc-d114-47cf-886d-d6aea4d86820" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59421/Service/tu/TauthuyenService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TauthuyenService.xsd" MetadataType="Schema" ID="a65c1af1-4f69-4d30-91fb-de16f5756718" SourceId="1" SourceUrl="http://localhost:59421/Service/tu/TauthuyenService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TauthuyenService1.xsd" MetadataType="Schema" ID="80bca12e-251f-4a8a-aafb-fe81baf598f0" SourceId="1" SourceUrl="http://localhost:59421/Service/tu/TauthuyenService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TauthuyenService.disco" MetadataType="Disco" ID="e15b2dea-dac5-471e-b05c-cfc20188f8c1" SourceId="1" SourceUrl="http://localhost:59421/Service/tu/TauthuyenService.svc?disco" />
+    <MetadataFile FileName="TauthuyenService2.xsd" MetadataType="Schema" ID="13460f60-1c79-462d-b311-40eba624af3f" SourceId="1" SourceUrl="http://localhost:59421/Service/tu/TauthuyenService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TauthuyenService.wsdl" MetadataType="Wsdl" ID="175159df-21ad-4e67-b503-8d4f59a4448a" SourceId="1" SourceUrl="http://localhost:59421/Service/tu/TauthuyenService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
