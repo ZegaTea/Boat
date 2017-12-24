@@ -17,3 +17,21 @@ E:\Code-C#\boat\BoatService\bin\Microsoft.ApplicationInsights.xml
 E:\Code-C#\boat\BoatService\obj\Debug\BoatService.csprojResolveAssemblyReference.cache
 E:\Code-C#\boat\BoatService\obj\Debug\BoatService.dll
 E:\Code-C#\boat\BoatService\obj\Debug\BoatService.pdb
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\ApplicationInsights.config
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\BoatService.dll.config
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\BoatService.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\BoatService.pdb
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.DependencyCollector.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.Web.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.WindowsServer.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.ApplicationInsights.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.DependencyCollector.xml
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.Web.xml
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.WindowsServer.xml
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.ApplicationInsights.xml
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\obj\Debug\BoatService.dll
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\obj\Debug\BoatService.pdb
