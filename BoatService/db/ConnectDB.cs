@@ -16,7 +16,7 @@ namespace BoatService.db
         private SqlTransaction tran = null;
         public ConnectDB()
         {
-            conn = new SqlConnection(@"Data Source=BARNEY;Initial Catalog=boat;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=DESKTOP-HS87TDC\SQLEXPRESS;Initial Catalog=boat;Integrated Security=True");
         }
 
         /// <summary>

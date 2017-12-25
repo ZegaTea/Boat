@@ -36,7 +36,7 @@ namespace BoatService.Service.tuan
 
         public DataSet layDanhSachTau()
         {
-            return Tuan_dv_DataAccess.ExecQuery("select t.image, t.ma as MaTau,tentau as TenTau,MMSI,l.tenloaitau as LoaiTau,taitrong,q.tenquocgia from tauthuyen t left join loaitau l on t.maloaitau = l.ma left join quocgia q on t.maquocgia = q.ma");
+            return Tuan_dv_DataAccess.ExecQuery("select  t.ma as MaTau,tentau as TenTau,l.tenloaitau as LoaiTau,q.tenquocgia from tauthuyen t left join loaitau l on t.maloaitau = l.ma left join quocgia q on t.maquocgia = q.ma");
         }
         public DataSet layDanhSachLoaiTau()
         {

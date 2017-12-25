@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using boat.ServiceReferenceTauThuyen_Tuandv;
-using DevExpress.XtraEditors;
 using System.IO;
 
 namespace boat.GUI
@@ -24,49 +23,28 @@ namespace boat.GUI
         {
             InitializeComponent();
             client = new ServiceTauThuyenClient();
-            lookUpEditLoaiTau.Properties.DataSource = client.layDanhSachLoaiTau().Tables[0];
-            lookUpEditLoaiTau.Properties.ValueMember = "ma";
-            lookUpEditLoaiTau.Properties.DisplayMember = "tenloaitau";
-            lookUpEditQuocGia.Properties.DataSource = client.layDanhSachQuocGia().Tables[0];
-            lookUpEditQuocGia.Properties.ValueMember = "ma";
-            lookUpEditQuocGia.Properties.DisplayMember = "tenquocgia";
+            cmbLoaiTau.DataSource = client.layDanhSachLoaiTau().Tables[0];
+            cmbLoaiTau.ValueMember = "ma";
+            cmbLoaiTau.DisplayMember = "tenloaitau";
+            cmbQuocGia.DataSource = client.layDanhSachQuocGia().Tables[0];
+            cmbQuocGia.ValueMember = "ma";
+            cmbQuocGia.DisplayMember = "tenquocgia";
         }
 
         private void frmQuanlyTau_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = client.layDanhSachTau().Tables[0];
+            dgvTau.DataSource = client.layDanhSachTau().Tables[0];
                    
         }
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-           if (gridView1.GetFocusedRowCellValue(MaTau) != null)
-            {
-                t = client.GetTauThuyenById(gridView1.GetFocusedRowCellValue(MaTau).ToString());
-                if (t != null)
-                {
-                    txtMaTau.Text = t.ma;
-                    txtMMSI.Text = t.MMSI;
-                    txtTaitrong.Text = t.taitrong.ToString();
-                    txtTenTau.Text = t.tentau;
-                    lookUpEditLoaiTau.EditValue = t.maloaitau;
-                    lookUpEditQuocGia.EditValue = t.maquocgia;
-                    
-                   
-                    pictureEdit1.Image = Image.FromFile( path.Substring(0, path.Length - 9)+ @"GUI\ImageTau\" + t.image);
-                  
-                }
-            }
-
-        }
-
+      
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             txtMaTau.Enabled = true;
             txtMMSI.Enabled = true;
             txtTaitrong.Enabled = true;
             txtTenTau.Enabled = true;
-            lookUpEditLoaiTau.Enabled = true;
-            lookUpEditQuocGia.Enabled = true;
+            cmbLoaiTau.Enabled = true;
+            cmbQuocGia.Enabled = true;
             check = 1;
             txtMaTau.Text = "";
             txtMMSI.Text = "";
@@ -86,8 +64,8 @@ namespace boat.GUI
             txtMMSI.Enabled = true;
             txtTaitrong.Enabled = true;
             txtTenTau.Enabled = true;
-            lookUpEditLoaiTau.Enabled = true;
-            lookUpEditQuocGia.Enabled = true;
+            cmbLoaiTau.Enabled = true;
+            cmbQuocGia.Enabled = true;
             check = 2;
             simpleButton4.Enabled = true;
             simpleButton1.Enabled = false;
@@ -108,7 +86,7 @@ namespace boat.GUI
                 }
                 catch
                 {
-                    XtraMessageBox.Show("trọng tải phải nhập số");
+                    MessageBox.Show("trọng tải phải nhập số");
                     return;
                 }
                 string targetPath = path.Substring(0, path.Length - 9) + @"GUI\ImageTau\"+ s[s.Length - 1];
@@ -120,8 +98,8 @@ namespace boat.GUI
                 Tuan_dv_TauThuyenModel tau = new Tuan_dv_TauThuyenModel()
                 {
                     ma = txtMaTau.Text,
-                    maloaitau = lookUpEditLoaiTau.EditValue.ToString(),
-                    maquocgia = lookUpEditQuocGia.EditValue.ToString(),
+                    maloaitau = cmbLoaiTau.SelectedValue.ToString(),
+                    maquocgia = cmbQuocGia.SelectedValue.ToString(),
                     MMSI = txtMMSI.Text,
                     taitrong = long.Parse(txtTaitrong.Text),
                     tentau = txtTenTau.Text,
@@ -130,9 +108,9 @@ namespace boat.GUI
                 };
                 if (client.ThemTauThuyen(tau) > 0)
                 {
-                    XtraMessageBox.Show("Thêm tàu thành công");
+                    MessageBox.Show("Thêm tàu thành công");
                 }
-                else XtraMessageBox.Show("Thêm tàu thất bại");
+                else MessageBox.Show("Thêm tàu thất bại");
 
             }
             else  if(check==2)
@@ -143,7 +121,7 @@ namespace boat.GUI
                 }
                 catch
                 {
-                    XtraMessageBox.Show("trọng tải phải nhập số");
+                    MessageBox.Show("trọng tải phải nhập số");
                     return;
                 }
                 string targetPath = path.Substring(0, path.Length - 9) + @"GUI\ImageTau\" + s[s.Length - 1];
@@ -155,8 +133,8 @@ namespace boat.GUI
                 Tuan_dv_TauThuyenModel tau = new Tuan_dv_TauThuyenModel()
                 {
                     ma = txtMaTau.Text,
-                    maloaitau = lookUpEditLoaiTau.EditValue.ToString(),
-                    maquocgia = lookUpEditQuocGia.EditValue.ToString(),
+                    maloaitau = cmbLoaiTau.SelectedValue.ToString(),
+                    maquocgia = cmbQuocGia.SelectedValue.ToString(),
                     MMSI = txtMMSI.Text,
                     taitrong = long.Parse(txtTaitrong.Text),
                     tentau = txtTenTau.Text,
@@ -165,9 +143,9 @@ namespace boat.GUI
 
                 if (client.SuaTauThuyen(tau) > 0)
                 {
-                    XtraMessageBox.Show("Sửa tàu thành công");
+                    MessageBox.Show("Sửa tàu thành công");
                 }
-                else XtraMessageBox.Show("Sửa tàu thất bại");
+                else MessageBox.Show("Sửa tàu thất bại");
             }
             simpleButton4.Enabled = false;
             simpleButton5.Enabled = false;
@@ -179,8 +157,8 @@ namespace boat.GUI
             txtMMSI.Enabled = false;
             txtTaitrong.Enabled = false;
             txtTenTau.Enabled = false;
-            lookUpEditLoaiTau.Enabled = false;
-            lookUpEditQuocGia.Enabled = false;
+            cmbLoaiTau.Enabled = false;
+            cmbQuocGia.Enabled = false;
             frmQuanlyTau_Load(sender, e);
         }
 
@@ -188,11 +166,11 @@ namespace boat.GUI
         {
            if( MessageBox.Show("Bạn có chắc chắn muốn xóa?","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (client.XoaTauThuyen(txtMaTau.Text) > 1)
+                if (client.XoaTauThuyen(txtMaTau.Text) > 0)
                 {
-                    XtraMessageBox.Show("Xóa tàu thành công");
+                    MessageBox.Show("Xóa tàu thành công");
                 }
-                else XtraMessageBox.Show("Xóa tàu thất bại");
+                else MessageBox.Show("Xóa tàu thất bại");
                 frmQuanlyTau_Load(sender, e);
             }
         }
@@ -210,8 +188,8 @@ namespace boat.GUI
             txtMMSI.Enabled = false;
             txtTaitrong.Enabled = false;
             txtTenTau.Enabled = false;
-            lookUpEditLoaiTau.Enabled = false;
-            lookUpEditQuocGia.Enabled = false;
+            cmbLoaiTau.Enabled = false;
+            cmbQuocGia.Enabled = false;
         }
 
         private void simpleButton6_Click(object sender, EventArgs e)
@@ -222,6 +200,33 @@ namespace boat.GUI
                linkImg = openFileDialog1.FileName;
                 pictureEdit1.Image = Image.FromFile(openFileDialog1.FileName);
             }
+        }
+
+        private void dgvTau_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+               
+                t = client.GetTauThuyenById(dgvTau.Rows[e.RowIndex].Cells["MaTau"].Value.ToString());
+                if (t != null)
+                {
+                    txtMaTau.Text = t.ma;
+                    txtMMSI.Text = t.MMSI;
+                    txtTaitrong.Text = t.taitrong.ToString();
+                    txtTenTau.Text = t.tentau;
+                    cmbLoaiTau.SelectedItem = t.maloaitau;
+                    cmbQuocGia.SelectedItem = t.maquocgia;
+
+                    linkImg= path.Substring(0, path.Length - 9) + @"GUI\ImageTau\" + t.image;
+                    pictureEdit1.Image = Image.FromFile(linkImg);
+
+                }
+            }
+        }
+
+        private void txtMaTau_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

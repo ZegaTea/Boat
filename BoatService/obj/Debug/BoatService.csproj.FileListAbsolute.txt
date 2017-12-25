@@ -35,3 +35,4 @@ D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.AI.Wind
 D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\bin\Microsoft.ApplicationInsights.xml
 D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\obj\Debug\BoatService.dll
 D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\obj\Debug\BoatService.pdb
+D:\Kỳ I Năm 4\Lập trình tích hợp\boat\BoatService\obj\Debug\BoatService.csprojResolveAssemblyReference.cache
