@@ -17,3 +17,7 @@ E:\Code-C#\boat\BoatService\bin\Microsoft.ApplicationInsights.xml
 E:\Code-C#\boat\BoatService\obj\Debug\BoatService.csprojResolveAssemblyReference.cache
 E:\Code-C#\boat\BoatService\obj\Debug\BoatService.dll
 E:\Code-C#\boat\BoatService\obj\Debug\BoatService.pdb
+E:\Code-C#\boat\BoatService\bin\EntityFramework.dll
+E:\Code-C#\boat\BoatService\bin\EntityFramework.SqlServer.dll
+E:\Code-C#\boat\BoatService\bin\EntityFramework.xml
+E:\Code-C#\boat\BoatService\bin\EntityFramework.SqlServer.xml

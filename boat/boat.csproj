@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BaoBUS.cs" />
+    <Compile Include="BUS\QuocgiaBUS.cs" />
     <Compile Include="BUS\TauthuyenBUS.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -65,11 +66,11 @@
     </Compile>
     <Compile Include="Global\Constant.cs" />
     <Compile Include="Global\GlobalVariables.cs" />
-    <Compile Include="GUI\frmDanhSachTau.cs">
+    <Compile Include="GUI\frmQuanly.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmDanhSachTau.Designer.cs">
-      <DependentUpon>frmDanhSachTau.cs</DependentUpon>
+    <Compile Include="GUI\frmQuanly.Designer.cs">
+      <DependentUpon>frmQuanly.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmGuiToaDo.cs">
       <SubType>Form</SubType>
@@ -92,13 +93,13 @@
     <Compile Include="GUI\frmQuanlyLoaitau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmQuanlyLoaitau.Designer.cs">
+    <Compile Include="GUI\frmQuanlyLoaitau.designer.cs">
       <DependentUpon>frmQuanlyLoaitau.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmQuanlyQuocgia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmQuanlyQuocgia.Designer.cs">
+    <Compile Include="GUI\frmQuanlyQuocgia.designer.cs">
       <DependentUpon>frmQuanlyQuocgia.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmQuanlyTau.cs">
@@ -157,7 +158,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\QuocgiaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReferenceTauThuyen_Tuandv\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShipTypeServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -172,8 +183,8 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmDanhSachTau.resx">
-      <DependentUpon>frmDanhSachTau.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmQuanly.resx">
+      <DependentUpon>frmQuanly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmGuiToaDo.resx">
       <DependentUpon>frmGuiToaDo.cs</DependentUpon>
@@ -249,6 +260,16 @@
     <None Include="Service References\ConBaoService\ConBaoService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\QuocgiaService\QuanLyQuocGia.wsdl" />
+    <None Include="Service References\QuocgiaService\QuanLyQuocGia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuocgiaService\QuanLyQuocGia1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuocgiaService\QuanLyQuocGia2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\boat.ServiceReferenceTauThuyen_Tuandv.Tuan_dv_TauThuyenModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -263,6 +284,19 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\ServiceTauThuyen3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShipTypeServiceReference\LoaiTauService.wsdl" />
+    <None Include="Service References\ShipTypeServiceReference\LoaiTauService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShipTypeServiceReference\LoaiTauService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShipTypeServiceReference\LoaiTauService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShipTypeServiceReference\LoaiTauService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\TauService\TauthuyenService.wsdl" />
@@ -285,7 +319,9 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BaoService\" />
     <WCFMetadataStorage Include="Service References\ConBaoService\" />
+    <WCFMetadataStorage Include="Service References\QuocgiaService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceTauThuyen_Tuandv\" />
+    <WCFMetadataStorage Include="Service References\ShipTypeServiceReference\" />
     <WCFMetadataStorage Include="Service References\TauService\" />
   </ItemGroup>
   <ItemGroup>
@@ -304,7 +340,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\ImageTau\" />
     <Folder Include="Model\Entities\" />
   </ItemGroup>
   <ItemGroup>
@@ -351,6 +386,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuocgiaService\QuanLyQuocGia.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuocgiaService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuocgiaService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QuocgiaService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShipTypeServiceReference\LoaiTauService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShipTypeServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShipTypeServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShipTypeServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

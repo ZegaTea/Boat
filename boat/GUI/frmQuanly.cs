@@ -16,7 +16,7 @@ using boat.Model.DTO;
 using boat.Util;
 namespace boat.GUI
 {
-    public partial class frmDanhSachTau : Form
+    public partial class frmQuanly : Form
     {
         private TauthuyenServiceClient tauService = new TauthuyenServiceClient();
         private ConvertUtils conv = new ConvertUtils();
@@ -24,7 +24,7 @@ namespace boat.GUI
         private string matau = "";
         private List<VitriDTO> vitri;
         private TauChitietDTO tauChitiet;
-        public frmDanhSachTau()
+        public frmQuanly()
         {
             InitializeComponent();
         }

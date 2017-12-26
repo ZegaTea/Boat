@@ -1,11 +1,12 @@
-﻿using System.Data;
+﻿using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace BoatService.db
 {
     public class Tuan_dv_DataAccess
     {
-        public static SqlConnection con=  new SqlConnection(@"Data Source=BARNEY;Initial Catalog=boat;Integrated Security=True");
+        public static SqlConnection con=  new SqlConnection(ConfigurationManager.ConnectionStrings["boat"].ConnectionString);
         /// <summary>
         /// GET
         /// </summary>

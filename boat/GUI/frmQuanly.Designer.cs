@@ -1,6 +1,6 @@
 ﻿namespace boat.GUI
 {
-    partial class frmDanhSachTau
+    partial class frmQuanly
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDanhSachTau));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanly));
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quanlytauTSMI = new System.Windows.Forms.ToolStripMenuItem();

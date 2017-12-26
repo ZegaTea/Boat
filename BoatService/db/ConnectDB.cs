@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BoatService.db
 {
@@ -16,7 +17,7 @@ namespace BoatService.db
         private SqlTransaction tran = null;
         public ConnectDB()
         {
-            conn = new SqlConnection(@"Data Source=BARNEY;Initial Catalog=boat;Integrated Security=True");
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["boat"].ConnectionString);
         }
 
         /// <summary>
