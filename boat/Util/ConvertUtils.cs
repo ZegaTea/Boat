@@ -1,4 +1,5 @@
 ﻿using boat.Model.DTO;
+using BoatService.Service.linh;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -36,6 +37,7 @@ namespace boat.Util
             foreach(DataRow dr in dt.Rows)
             {
                 HanhtrinhDTO ht = new HanhtrinhDTO();
+                ht.matau = dr.Field<string>("ma");
                 ht.tentau = dr.Field<string>("tentau");
                 ht.MMSI = dr.Field<string>("MMSI");
                 ht.vido = dr.Field<double>("vido");
@@ -73,6 +75,60 @@ namespace boat.Util
             t.taitrong = dt.Rows[0].Field<long>("taitrong");
 
             return t;
+        }
+
+        public List<BaoVitriDTO> convertBaoVitri(DataTable dt)
+        {
+            List<BaoVitriDTO> result = new List<BaoVitriDTO>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                BaoVitriDTO bao = new BaoVitriDTO();
+                bao.ma = dr.Field<string>("ma");
+                bao.tenbao = dr.Field<string>("tenconbao");
+                bao.vido = dr.Field<double>("vido");
+                bao.kinhdo = dr.Field<double>("kinhdo");
+                bao.thoigian = dr.Field<long>("thoigian");
+                try
+                {
+                    bao.trangthai = dr.Field<string>("trangthai");
+                } catch(Exception ex)
+                {
+                    bao.trangthai = "null";
+                }
+                result.Add(bao);
+            }
+            return result;
+        }
+
+        public List<PairDTO> convertPair(DataTable dt)
+        {
+            List<PairDTO> result = new List<PairDTO>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                PairDTO pair = new PairDTO();
+                pair.ma = dr.Field<string>("ma");
+                pair.vido = dr.Field<double>("vido");
+                pair.kinhdo = dr.Field<double>("kinhdo");
+                pair.thoigian = dr.Field<long>("thoigian");
+                result.Add(pair);
+            }
+            return result;
+        }
+
+        public static List<ViTriBaoDTO> convertViTriBao(DataTable dt)
+        {
+            List<ViTriBaoDTO> lst = new List<ViTriBaoDTO>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                ViTriBaoDTO viTri = new ViTriBaoDTO();
+                viTri.vido = dr.Field<double>("vido");
+                viTri.kinhdo = dr.Field<double>("kinhdo");
+                viTri.vanToc = dr.Field<double>("vantoc");
+                viTri.thoigian = dr.Field<long>("thoigian");
+                lst.Add(viTri);
+            }
+
+            return lst;
         }
     }
 }

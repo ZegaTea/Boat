@@ -8,6 +8,7 @@ namespace boat.Model.DTO
 {
     class HanhtrinhDTO
     {
+        public string matau { get; set; }
         public string tentau { get; set; }
         public string MMSI { get; set; }
         public double vido { get; set; }

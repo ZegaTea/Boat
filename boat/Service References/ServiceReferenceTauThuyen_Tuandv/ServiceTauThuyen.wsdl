@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceTauThuyen" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59421/Service/tuan/ServiceTauThuyen.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59421/Service/tuan/ServiceTauThuyen.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59421/Service/tuan/ServiceTauThuyen.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BoatService" />
+      <xsd:import schemaLocation="http://localhost:59421/Service/tuan/ServiceTauThuyen.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceTauThuyen_GetTauThuyenById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTauThuyenById" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_GetTauThuyenById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTauThuyenByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_ThemTauThuyen_InputMessage">
+    <wsdl:part name="parameters" element="tns:ThemTauThuyen" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_ThemTauThuyen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThemTauThuyenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_SuaTauThuyen_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuaTauThuyen" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_SuaTauThuyen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuaTauThuyenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_layDanhSachTau_InputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachTau" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_layDanhSachTau_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachTauResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_layDanhSachLoaiTau_InputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachLoaiTau" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_layDanhSachLoaiTau_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachLoaiTauResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_layDanhSachQuocGia_InputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachQuocGia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_layDanhSachQuocGia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachQuocGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_XoaTauThuyen_InputMessage">
+    <wsdl:part name="parameters" element="tns:XoaTauThuyen" />
+  </wsdl:message>
+  <wsdl:message name="IServiceTauThuyen_XoaTauThuyen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XoaTauThuyenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceTauThuyen">
+    <wsdl:operation name="GetTauThuyenById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceTauThuyen/GetTauThuyenById" message="tns:IServiceTauThuyen_GetTauThuyenById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceTauThuyen/GetTauThuyenByIdResponse" message="tns:IServiceTauThuyen_GetTauThuyenById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemTauThuyen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceTauThuyen/ThemTauThuyen" message="tns:IServiceTauThuyen_ThemTauThuyen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceTauThuyen/ThemTauThuyenResponse" message="tns:IServiceTauThuyen_ThemTauThuyen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaTauThuyen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceTauThuyen/SuaTauThuyen" message="tns:IServiceTauThuyen_SuaTauThuyen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceTauThuyen/SuaTauThuyenResponse" message="tns:IServiceTauThuyen_SuaTauThuyen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layDanhSachTau">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceTauThuyen/layDanhSachTau" message="tns:IServiceTauThuyen_layDanhSachTau_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceTauThuyen/layDanhSachTauResponse" message="tns:IServiceTauThuyen_layDanhSachTau_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layDanhSachLoaiTau">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceTauThuyen/layDanhSachLoaiTau" message="tns:IServiceTauThuyen_layDanhSachLoaiTau_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceTauThuyen/layDanhSachLoaiTauResponse" message="tns:IServiceTauThuyen_layDanhSachLoaiTau_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layDanhSachQuocGia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceTauThuyen/layDanhSachQuocGia" message="tns:IServiceTauThuyen_layDanhSachQuocGia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceTauThuyen/layDanhSachQuocGiaResponse" message="tns:IServiceTauThuyen_layDanhSachQuocGia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaTauThuyen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceTauThuyen/XoaTauThuyen" message="tns:IServiceTauThuyen_XoaTauThuyen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceTauThuyen/XoaTauThuyenResponse" message="tns:IServiceTauThuyen_XoaTauThuyen_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceTauThuyen" type="tns:IServiceTauThuyen">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTauThuyenById">
+      <soap:operation soapAction="http://tempuri.org/IServiceTauThuyen/GetTauThuyenById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemTauThuyen">
+      <soap:operation soapAction="http://tempuri.org/IServiceTauThuyen/ThemTauThuyen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaTauThuyen">
+      <soap:operation soapAction="http://tempuri.org/IServiceTauThuyen/SuaTauThuyen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layDanhSachTau">
+      <soap:operation soapAction="http://tempuri.org/IServiceTauThuyen/layDanhSachTau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layDanhSachLoaiTau">
+      <soap:operation soapAction="http://tempuri.org/IServiceTauThuyen/layDanhSachLoaiTau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layDanhSachQuocGia">
+      <soap:operation soapAction="http://tempuri.org/IServiceTauThuyen/layDanhSachQuocGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaTauThuyen">
+      <soap:operation soapAction="http://tempuri.org/IServiceTauThuyen/XoaTauThuyen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceTauThuyen">
+    <wsdl:port name="BasicHttpBinding_IServiceTauThuyen" binding="tns:BasicHttpBinding_IServiceTauThuyen">
+      <soap:address location="http://localhost:59421/Service/tuan/ServiceTauThuyen.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

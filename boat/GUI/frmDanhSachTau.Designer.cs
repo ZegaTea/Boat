@@ -194,9 +194,10 @@
             // 
             this.txtTaitrong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTaitrong.Enabled = false;
+            this.txtTaitrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaitrong.Location = new System.Drawing.Point(99, 197);
             this.txtTaitrong.Name = "txtTaitrong";
+            this.txtTaitrong.ReadOnly = true;
             this.txtTaitrong.Size = new System.Drawing.Size(209, 20);
             this.txtTaitrong.TabIndex = 22;
             // 
@@ -215,9 +216,10 @@
             // 
             this.txtQuocGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtQuocGia.Enabled = false;
+            this.txtQuocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuocGia.Location = new System.Drawing.Point(99, 164);
             this.txtQuocGia.Name = "txtQuocGia";
+            this.txtQuocGia.ReadOnly = true;
             this.txtQuocGia.Size = new System.Drawing.Size(209, 20);
             this.txtQuocGia.TabIndex = 20;
             // 
@@ -236,9 +238,10 @@
             // 
             this.txtLoaiTau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLoaiTau.Enabled = false;
+            this.txtLoaiTau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoaiTau.Location = new System.Drawing.Point(99, 127);
             this.txtLoaiTau.Name = "txtLoaiTau";
+            this.txtLoaiTau.ReadOnly = true;
             this.txtLoaiTau.Size = new System.Drawing.Size(209, 20);
             this.txtLoaiTau.TabIndex = 18;
             // 
@@ -257,9 +260,10 @@
             // 
             this.txtMMSI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMMSI.Enabled = false;
+            this.txtMMSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMMSI.Location = new System.Drawing.Point(99, 90);
             this.txtMMSI.Name = "txtMMSI";
+            this.txtMMSI.ReadOnly = true;
             this.txtMMSI.Size = new System.Drawing.Size(209, 20);
             this.txtMMSI.TabIndex = 16;
             // 
@@ -278,9 +282,10 @@
             // 
             this.txtTenTau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTenTau.Enabled = false;
+            this.txtTenTau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTau.Location = new System.Drawing.Point(99, 54);
             this.txtTenTau.Name = "txtTenTau";
+            this.txtTenTau.ReadOnly = true;
             this.txtTenTau.Size = new System.Drawing.Size(209, 20);
             this.txtTenTau.TabIndex = 14;
             // 
@@ -299,9 +304,10 @@
             // 
             this.txtMaTau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMaTau.Enabled = false;
+            this.txtMaTau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaTau.Location = new System.Drawing.Point(99, 22);
             this.txtMaTau.Name = "txtMaTau";
+            this.txtMaTau.ReadOnly = true;
             this.txtMaTau.Size = new System.Drawing.Size(209, 20);
             this.txtMaTau.TabIndex = 12;
             // 

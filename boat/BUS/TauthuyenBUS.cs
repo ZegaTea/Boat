@@ -49,5 +49,20 @@ namespace boat.BUS
         {
             return tauSerivce.layHanhTrinh(maHanhTrinh);
         }
+
+        public DataSet layVitriCuoi(string matau)
+        {
+            return tauSerivce.layVitriCuoi(matau);
+        }
+
+        public DataSet layVitriCuoiAll()
+        {
+            return tauSerivce.layVitriCuoiAll();
+        }
+
+        public DataSet getListTauDanger(string taus)
+        {
+            return tauSerivce.getListTauDanger(taus);
+        }
     }
 }

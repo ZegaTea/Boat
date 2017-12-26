@@ -82,12 +82,12 @@
             // 
             // lblText
             // 
-            this.lblText.AutoSize = true;
-            this.lblText.Location = new System.Drawing.Point(86, 92);
+            this.lblText.Location = new System.Drawing.Point(13, 95);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(99, 13);
+            this.lblText.Size = new System.Drawing.Size(259, 13);
             this.lblText.TabIndex = 4;
             this.lblText.Text = "Đang gửi tọa độ ... ";
+            this.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmGuiToaDo
             // 

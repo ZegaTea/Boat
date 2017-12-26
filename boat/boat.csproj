@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BaoBUS.cs" />
     <Compile Include="BUS\TauthuyenBUS.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -61,6 +63,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global\Constant.cs" />
     <Compile Include="Global\GlobalVariables.cs" />
     <Compile Include="GUI\frmDanhSachTau.cs">
       <SubType>Form</SubType>
@@ -74,10 +77,16 @@
     <Compile Include="GUI\frmGuiToaDo.Designer.cs">
       <DependentUpon>frmGuiToaDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmMophongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMophongBao.Designer.cs">
+      <DependentUpon>frmMophongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmQuanlyBao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmQuanlyBao.Designer.cs">
+    <Compile Include="GUI\frmQuanlyBao.designer.cs">
       <DependentUpon>frmQuanlyBao.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmQuanlyLoaitau.cs">
@@ -95,22 +104,64 @@
     <Compile Include="GUI\frmQuanlyTau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmQuanlyTau.Designer.cs">
+    <Compile Include="GUI\frmQuanlyTau.designer.cs">
       <DependentUpon>frmQuanlyTau.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmToadoBao.cs">
+    <Compile Include="GUI\LinhGUI\ChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmToadoBao.Designer.cs">
-      <DependentUpon>frmToadoBao.cs</DependentUpon>
+    <Compile Include="GUI\LinhGUI\ChiTiet.Designer.cs">
+      <DependentUpon>ChiTiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\LinhGUI\frmHanhTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LinhGUI\frmHanhTrinh.Designer.cs">
+      <DependentUpon>frmHanhTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LinhGUI\frmThemConBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LinhGUI\frmThemConBao.Designer.cs">
+      <DependentUpon>frmThemConBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LinhGUI\QuanLyViTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LinhGUI\QuanLyViTri.Designer.cs">
+      <DependentUpon>QuanLyViTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LinhGUI\ThemViTriBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LinhGUI\ThemViTriBao.Designer.cs">
+      <DependentUpon>ThemViTriBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DTO\BaoVitriDTO.cs" />
     <Compile Include="Model\DTO\HanhtrinhDTO.cs" />
     <Compile Include="Model\DTO\LatLng.cs" />
+    <Compile Include="Model\DTO\Linh\ViTriBaoDTO.cs" />
+    <Compile Include="Model\DTO\PairDTO.cs" />
     <Compile Include="Model\DTO\TauChitietDTO.cs" />
     <Compile Include="Model\DTO\TauVItriDTO.cs" />
     <Compile Include="Model\DTO\VitriDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BaoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ConBaoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceTauThuyen_Tuandv\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\TauService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +178,9 @@
     <EmbeddedResource Include="GUI\frmGuiToaDo.resx">
       <DependentUpon>frmGuiToaDo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMophongBao.resx">
+      <DependentUpon>frmMophongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmQuanlyBao.resx">
       <DependentUpon>frmQuanlyBao.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,8 +193,20 @@
     <EmbeddedResource Include="GUI\frmQuanlyTau.resx">
       <DependentUpon>frmQuanlyTau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmToadoBao.resx">
-      <DependentUpon>frmToadoBao.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\LinhGUI\ChiTiet.resx">
+      <DependentUpon>ChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LinhGUI\frmHanhTrinh.resx">
+      <DependentUpon>frmHanhTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LinhGUI\frmThemConBao.resx">
+      <DependentUpon>frmThemConBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LinhGUI\QuanLyViTri.resx">
+      <DependentUpon>QuanLyViTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LinhGUI\ThemViTriBao.resx">
+      <DependentUpon>ThemViTriBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,6 +216,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
@@ -162,6 +229,42 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\BaoService\BaoService.wsdl" />
+    <None Include="Service References\BaoService\BaoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaoService\BaoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BaoService\BaoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConBaoService\ConBaoService.wsdl" />
+    <None Include="Service References\ConBaoService\ConBaoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConBaoService\ConBaoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConBaoService\ConBaoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\boat.ServiceReferenceTauThuyen_Tuandv.Tuan_dv_TauThuyenModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\ServiceTauThuyen.wsdl" />
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\ServiceTauThuyen.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\ServiceTauThuyen1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\ServiceTauThuyen2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\ServiceTauThuyen3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\TauService\TauthuyenService.wsdl" />
     <None Include="Service References\TauService\TauthuyenService.xsd">
       <SubType>Designer</SubType>
@@ -180,6 +283,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BaoService\" />
+    <WCFMetadataStorage Include="Service References\ConBaoService\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceTauThuyen_Tuandv\" />
     <WCFMetadataStorage Include="Service References\TauService\" />
   </ItemGroup>
   <ItemGroup>
@@ -198,7 +304,56 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="GUI\ImageTau\" />
     <Folder Include="Model\Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaoService\BaoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BaoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Hunt_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConBaoService\ConBaoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConBaoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConBaoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConBaoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\ServiceTauThuyen.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceTauThuyen_Tuandv\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BaoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59421/Service/tu/BaoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59421/Service/tu/BaoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59421/Service/tu/BaoService.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBaoService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_getListBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListBao" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_getListBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_addToHanhtrinhBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToHanhtrinhBao" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_addToHanhtrinhBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToHanhtrinhBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_huyHanhtrinhBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:huyHanhtrinhBao" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_huyHanhtrinhBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:huyHanhtrinhBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_addToVitriBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToVitriBao" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_addToVitriBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToVitriBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_getVitriBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:getVitriBao" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_getVitriBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getVitriBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_getListNewestBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListNewestBao" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_getListNewestBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListNewestBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_layVitriCuoiAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:layVitriCuoiAll" />
+  </wsdl:message>
+  <wsdl:message name="IBaoService_layVitriCuoiAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layVitriCuoiAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBaoService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/DoWork" message="tns:IBaoService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/DoWorkResponse" message="tns:IBaoService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/getListBao" message="tns:IBaoService_getListBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/getListBaoResponse" message="tns:IBaoService_getListBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addToHanhtrinhBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/addToHanhtrinhBao" message="tns:IBaoService_addToHanhtrinhBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/addToHanhtrinhBaoResponse" message="tns:IBaoService_addToHanhtrinhBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="huyHanhtrinhBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/huyHanhtrinhBao" message="tns:IBaoService_huyHanhtrinhBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/huyHanhtrinhBaoResponse" message="tns:IBaoService_huyHanhtrinhBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addToVitriBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/addToVitriBao" message="tns:IBaoService_addToVitriBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/addToVitriBaoResponse" message="tns:IBaoService_addToVitriBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getVitriBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/getVitriBao" message="tns:IBaoService_getVitriBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/getVitriBaoResponse" message="tns:IBaoService_getVitriBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListNewestBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/getListNewestBao" message="tns:IBaoService_getListNewestBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/getListNewestBaoResponse" message="tns:IBaoService_getListNewestBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layVitriCuoiAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaoService/layVitriCuoiAll" message="tns:IBaoService_layVitriCuoiAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaoService/layVitriCuoiAllResponse" message="tns:IBaoService_layVitriCuoiAll_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBaoService" type="tns:IBaoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListBao">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/getListBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addToHanhtrinhBao">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/addToHanhtrinhBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="huyHanhtrinhBao">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/huyHanhtrinhBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addToVitriBao">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/addToVitriBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVitriBao">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/getVitriBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListNewestBao">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/getListNewestBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layVitriCuoiAll">
+      <soap:operation soapAction="http://tempuri.org/IBaoService/layVitriCuoiAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BaoService">
+    <wsdl:port name="BasicHttpBinding_IBaoService" binding="tns:BasicHttpBinding_IBaoService">
+      <soap:address location="http://localhost:59421/Service/tu/BaoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

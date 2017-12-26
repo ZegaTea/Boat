@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ConBaoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59421/Service/linh/ConBaoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59421/Service/linh/ConBaoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59421/Service/linh/ConBaoService.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConBaoService_layDanhSachBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_layDanhSachBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layDanhSachBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_themConBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:themConBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_themConBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:themConBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_xoaConBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:xoaConBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_xoaConBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:xoaConBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_themHanhTrinhBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:themHanhTrinhBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_themHanhTrinhBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:themHanhTrinhBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_xoaHanhtrinhBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:xoaHanhtrinhBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_xoaHanhtrinhBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:xoaHanhtrinhBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_themViTriBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:themViTriBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_themViTriBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:themViTriBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_xoaViTriBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:xoaViTriBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_xoaViTriBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:xoaViTriBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_suaViTriBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:suaViTriBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_suaViTriBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:suaViTriBaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_layTinhTrang_InputMessage">
+    <wsdl:part name="parameters" element="tns:layTinhTrang" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_layTinhTrang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layTinhTrangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_layDSHanhTrinh_InputMessage">
+    <wsdl:part name="parameters" element="tns:layDSHanhTrinh" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_layDSHanhTrinh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layDSHanhTrinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_layViTriBao_InputMessage">
+    <wsdl:part name="parameters" element="tns:layViTriBao" />
+  </wsdl:message>
+  <wsdl:message name="IConBaoService_layViTriBao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layViTriBaoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IConBaoService">
+    <wsdl:operation name="layDanhSachBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/layDanhSachBao" message="tns:IConBaoService_layDanhSachBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/layDanhSachBaoResponse" message="tns:IConBaoService_layDanhSachBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="themConBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/themConBao" message="tns:IConBaoService_themConBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/themConBaoResponse" message="tns:IConBaoService_themConBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xoaConBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/xoaConBao" message="tns:IConBaoService_xoaConBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/xoaConBaoResponse" message="tns:IConBaoService_xoaConBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="themHanhTrinhBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/themHanhTrinhBao" message="tns:IConBaoService_themHanhTrinhBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/themHanhTrinhBaoResponse" message="tns:IConBaoService_themHanhTrinhBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xoaHanhtrinhBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/xoaHanhtrinhBao" message="tns:IConBaoService_xoaHanhtrinhBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/xoaHanhtrinhBaoResponse" message="tns:IConBaoService_xoaHanhtrinhBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="themViTriBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/themViTriBao" message="tns:IConBaoService_themViTriBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/themViTriBaoResponse" message="tns:IConBaoService_themViTriBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xoaViTriBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/xoaViTriBao" message="tns:IConBaoService_xoaViTriBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/xoaViTriBaoResponse" message="tns:IConBaoService_xoaViTriBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="suaViTriBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/suaViTriBao" message="tns:IConBaoService_suaViTriBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/suaViTriBaoResponse" message="tns:IConBaoService_suaViTriBao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layTinhTrang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/layTinhTrang" message="tns:IConBaoService_layTinhTrang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/layTinhTrangResponse" message="tns:IConBaoService_layTinhTrang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layDSHanhTrinh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/layDSHanhTrinh" message="tns:IConBaoService_layDSHanhTrinh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/layDSHanhTrinhResponse" message="tns:IConBaoService_layDSHanhTrinh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layViTriBao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConBaoService/layViTriBao" message="tns:IConBaoService_layViTriBao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConBaoService/layViTriBaoResponse" message="tns:IConBaoService_layViTriBao_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConBaoService" type="tns:IConBaoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="layDanhSachBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/layDanhSachBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="themConBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/themConBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xoaConBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/xoaConBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="themHanhTrinhBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/themHanhTrinhBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xoaHanhtrinhBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/xoaHanhtrinhBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="themViTriBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/themViTriBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xoaViTriBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/xoaViTriBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="suaViTriBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/suaViTriBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layTinhTrang">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/layTinhTrang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layDSHanhTrinh">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/layDSHanhTrinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layViTriBao">
+      <soap:operation soapAction="http://tempuri.org/IConBaoService/layViTriBao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConBaoService">
+    <wsdl:port name="BasicHttpBinding_IConBaoService" binding="tns:BasicHttpBinding_IConBaoService">
+      <soap:address location="http://localhost:59421/Service/linh/ConBaoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

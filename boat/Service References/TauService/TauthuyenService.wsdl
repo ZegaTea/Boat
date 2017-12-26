@@ -67,6 +67,24 @@
   <wsdl:message name="ITauthuyenService_layChitietTau_OutputMessage">
     <wsdl:part name="parameters" element="tns:layChitietTauResponse" />
   </wsdl:message>
+  <wsdl:message name="ITauthuyenService_layVitriCuoi_InputMessage">
+    <wsdl:part name="parameters" element="tns:layVitriCuoi" />
+  </wsdl:message>
+  <wsdl:message name="ITauthuyenService_layVitriCuoi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layVitriCuoiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITauthuyenService_layVitriCuoiAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:layVitriCuoiAll" />
+  </wsdl:message>
+  <wsdl:message name="ITauthuyenService_layVitriCuoiAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:layVitriCuoiAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITauthuyenService_getListTauDanger_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListTauDanger" />
+  </wsdl:message>
+  <wsdl:message name="ITauthuyenService_getListTauDanger_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListTauDangerResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITauthuyenService">
     <wsdl:operation name="guiToaDo">
       <wsdl:input wsaw:Action="http://tempuri.org/ITauthuyenService/guiToaDo" message="tns:ITauthuyenService_guiToaDo_InputMessage" />
@@ -107,6 +125,18 @@
     <wsdl:operation name="layChitietTau">
       <wsdl:input wsaw:Action="http://tempuri.org/ITauthuyenService/layChitietTau" message="tns:ITauthuyenService_layChitietTau_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITauthuyenService/layChitietTauResponse" message="tns:ITauthuyenService_layChitietTau_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layVitriCuoi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITauthuyenService/layVitriCuoi" message="tns:ITauthuyenService_layVitriCuoi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITauthuyenService/layVitriCuoiResponse" message="tns:ITauthuyenService_layVitriCuoi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="layVitriCuoiAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITauthuyenService/layVitriCuoiAll" message="tns:ITauthuyenService_layVitriCuoiAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITauthuyenService/layVitriCuoiAllResponse" message="tns:ITauthuyenService_layVitriCuoiAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTauDanger">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITauthuyenService/getListTauDanger" message="tns:ITauthuyenService_getListTauDanger_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITauthuyenService/getListTauDangerResponse" message="tns:ITauthuyenService_getListTauDanger_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITauthuyenService" type="tns:ITauthuyenService">
@@ -194,6 +224,33 @@
     </wsdl:operation>
     <wsdl:operation name="layChitietTau">
       <soap:operation soapAction="http://tempuri.org/ITauthuyenService/layChitietTau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layVitriCuoi">
+      <soap:operation soapAction="http://tempuri.org/ITauthuyenService/layVitriCuoi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="layVitriCuoiAll">
+      <soap:operation soapAction="http://tempuri.org/ITauthuyenService/layVitriCuoiAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTauDanger">
+      <soap:operation soapAction="http://tempuri.org/ITauthuyenService/getListTauDanger" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -1,10 +1,12 @@
 ﻿using boat.BUS;
+using boat.Global;
 using boat.Model.DTO;
 using boat.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Device.Location;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +18,8 @@ namespace boat.GUI
     public partial class frmGuiToaDo : Form
     {
         TauthuyenBUS tauBus = new TauthuyenBUS();
+        private BaoBUS baoBus = new BaoBUS();
+        private ConvertUtils con = new ConvertUtils();
         private LatLng l;
         public frmGuiToaDo()
         {
@@ -33,6 +37,7 @@ namespace boat.GUI
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            lblText.ForeColor = Color.Black;
             lblText.Text = DateUtils.getTimeInMilis().ToString();
 
             LatLng latlng = randLatLng();
@@ -41,7 +46,22 @@ namespace boat.GUI
             string msg = "Tàu: " + cmbTau.Text + "\nMã số: " + cmbTau.SelectedValue + " \nvĩ độ : " + latlng.vido + "\nkinh độ : " + latlng.kinhdo;
 
             //rtbState.Text = oldMsg + ("Thông tin di chuyển " + i + ": \n" + msg + "\n" + DateTime.Now.ToString() + "\n------------\n");
-            Global.GlobalVariables.messageStates += ("Thông tin di chuyển : \n" + msg + "\n" + DateTime.Now.ToString() + "\n------------\n");
+            Global.GlobalVariables.messageStates += ("Thông tin di chuyển : \n" + msg + "\n" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "\n------------\n");
+
+            List<PairDTO> lstBaoPair = con.convertPair(baoBus.layVitriCuoiAll().Tables[0]);
+            foreach (PairDTO pair in lstBaoPair)
+            {
+                var sCoord = new GeoCoordinate(l.vido, l.kinhdo);
+                var eCoord = new GeoCoordinate(pair.vido, pair.kinhdo);
+                var x = sCoord.GetDistanceTo(eCoord);
+                if (x <= Constant.DANGER_RANGE)
+                {
+                    lblText.ForeColor = Color.Red;
+
+                    lblText.Text = "Nguy hiểm: Tàu đang đi vào khu vực có bão";
+                    break;
+                }
+            }
             //label1.Text = id;
         }
 
@@ -54,8 +74,11 @@ namespace boat.GUI
             }
             else
             {
+                
+
                 lblText.Visible = true;
                 cmbTau.Enabled = false;
+                lblText.ForeColor = Color.Black;
                 lblText.Text = DateUtils.getTimeInMilis().ToString();
                 tauBus.themHanhtrinh(cmbTau.SelectedValue.ToString());
                 int maHanhTrinh = tauBus.layMaHanhTrinh();
@@ -71,9 +94,27 @@ namespace boat.GUI
                 string msg = "Tàu: " + cmbTau.Text.ToString() + "\nMã số: " + cmbTau.SelectedValue + " \nvĩ độ : " + latlng.vido + "\nkinh độ : " + latlng.kinhdo;
 
                 //rtbState.Text = oldMsg + ("Thông tin di chuyển " + i + ": \n" + msg + "\n" + DateTime.Now.ToString() + "\n------------\n");
-                Global.GlobalVariables.messageStates += ("Thông tin di chuyển : \n" + msg + "\n" + DateTime.Now.ToString() + "\n------------\n");
+                Global.GlobalVariables.messageStates += ("Thông tin di chuyển : \n" + msg + "\n" + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "\n------------\n");
+
+                List<PairDTO> lstBaoPair = con.convertPair(baoBus.layVitriCuoiAll().Tables[0]);
+                foreach (PairDTO pair in lstBaoPair)
+                {
+                    var sCoord = new GeoCoordinate(l.vido, l.kinhdo);
+                    var eCoord = new GeoCoordinate(pair.vido, pair.kinhdo);
+                    var x = sCoord.GetDistanceTo(eCoord);
+                    if (x <= Constant.DANGER_RANGE)
+                    {
+                        lblText.ForeColor = Color.Red;
+                        
+                        lblText.Text = "Nguy hiểm: Tàu đang đi vào khu vực có bão";
+                        break;
+                    }
+                }
                 timer1.Start();
             }
+
+            btnDung.Enabled = true;
+            btnGui.Enabled = false;
         }
 
         private void btnDung_Click(object sender, EventArgs e)
@@ -83,6 +124,9 @@ namespace boat.GUI
             tauBus.huyHanhTrinh(Global.GlobalVariables.mapHanhtrinhtau[cmbTau.SelectedValue.ToString()]);
             Global.GlobalVariables.mapHanhtrinhtau.Remove(cmbTau.SelectedValue.ToString());
             cmbTau.Enabled = true;
+
+            btnDung.Enabled = false;
+            btnGui.Enabled = true;
         }
 
         private LatLng randLatLng()
@@ -94,20 +138,21 @@ namespace boat.GUI
             }
             catch (Exception ex)
             {
-
+                
             }
 
             LatLng newLatLng = new LatLng();
             long x = DateUtils.getTimeInMilis();
             Random rand = new Random();
-            //if(x %2 == 0)
+            //if (x % 2 == 0)
             //{
-            //    newLatLng.vido = l.vido + (float)rand.Next(100) / 100;
-            //    newLatLng.kinhdo = l.kinhdo - (float)rand.Next(100) / 100;
-            //} else
+            //    newLatLng.vido = l.vido + (double)rand.Next(100) / 100;
+            //    newLatLng.kinhdo = l.kinhdo + (double)rand.Next(1000) / 1000;
+            //}
+            //else
             //{
-            //    newLatLng.vido = l.vido - (float)rand.Next(100) / 100;
-            //    newLatLng.kinhdo = l.kinhdo + (float)rand.Next(100) / 100;
+            //    newLatLng.vido = l.vido + (double)rand.Next(10) / 100;
+            //    newLatLng.kinhdo = l.kinhdo - (double)rand.Next(10) / 1000;
             //}
 
             newLatLng.vido = l.vido + 0.01;

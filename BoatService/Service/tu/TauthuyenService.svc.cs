@@ -82,12 +82,11 @@ namespace BoatService.Service.tu
 
         public DataSet layHanhTrinh(int maHanhTrinh)
         {
-            string query = @"select t.tentau, t.MMSI, v.vido, v.kinhdo, v.thoigian 
+            string query = @"select t.ma, t.tentau, t.MMSI, v.vido, v.kinhdo, v.thoigian 
                             from vitritauthuyen v
                             join hanhtrinh h on v.mahanhtrinh = h.ma
                             join tauthuyen t on t.ma = h.matauthuyen
-                            where v.mahanhtrinh = " + maHanhTrinh
-                          + "order by v.thoigian";
+                            where v.mahanhtrinh = " + maHanhTrinh + " order by v.thoigian";
             DataSet ds = db.GetDataSet(query, "hanhtrinh");
             return ds;
         }
@@ -119,6 +118,40 @@ namespace BoatService.Service.tu
                             where t.ma = '" + matau + "'";
             DataSet ds = db.GetDataSet(query, "chitietTau");
             return ds;
+        }
+
+        public DataSet layVitriCuoi(string matau)
+        {
+            string query = @"select ht.matauthuyen,vt.vido, vt.kinhdo
+                            from (select ht.matauthuyen, max(vt.thoigian) as thoigian
+                            from vitritauthuyen vt
+                            join hanhtrinh ht on ht.ma = vt.mahanhtrinh
+                            group by ht.matauthuyen) t
+                            join vitritauthuyen vt on vt.thoigian = t.thoigian
+                            join hanhtrinh ht on vt.mahanhtrinh = ht.ma 
+                            where ht.matauthuyen = '" + matau + "'";
+            return db.GetDataSet(query, "VitriCuoi");
+        }
+
+        public DataSet layVitriCuoiAll()
+        {
+            string query = @"select ht.matauthuyen as ma ,vt.vido, vt.kinhdo, vt.thoigian
+                            from (select ht.matauthuyen, max(vt.thoigian) as thoigian
+                            from vitritauthuyen vt
+                            join hanhtrinh ht on ht.ma = vt.mahanhtrinh
+                            group by ht.matauthuyen) t
+                            join vitritauthuyen vt on vt.thoigian = t.thoigian
+                            join hanhtrinh ht on vt.mahanhtrinh = ht.ma";
+
+            return db.GetDataSet(query, "tauCuoiAll");
+        }
+
+        public DataSet getListTauDanger(string taus)
+        {
+            string query = @"select t.ma, t.tentau, N'Cảnh báo' as canhbao 
+                            from tauthuyen t
+                            where t.ma in (" + taus + ")";
+            return db.GetDataSet(query, "tauDanger");
         }
     }
 }

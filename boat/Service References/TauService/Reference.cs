@@ -74,6 +74,24 @@ namespace boat.TauService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITauthuyenService/layChitietTau", ReplyAction="http://tempuri.org/ITauthuyenService/layChitietTauResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> layChitietTauAsync(string matau);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITauthuyenService/layVitriCuoi", ReplyAction="http://tempuri.org/ITauthuyenService/layVitriCuoiResponse")]
+        System.Data.DataSet layVitriCuoi(string matau);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITauthuyenService/layVitriCuoi", ReplyAction="http://tempuri.org/ITauthuyenService/layVitriCuoiResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> layVitriCuoiAsync(string matau);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITauthuyenService/layVitriCuoiAll", ReplyAction="http://tempuri.org/ITauthuyenService/layVitriCuoiAllResponse")]
+        System.Data.DataSet layVitriCuoiAll();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITauthuyenService/layVitriCuoiAll", ReplyAction="http://tempuri.org/ITauthuyenService/layVitriCuoiAllResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> layVitriCuoiAllAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITauthuyenService/getListTauDanger", ReplyAction="http://tempuri.org/ITauthuyenService/getListTauDangerResponse")]
+        System.Data.DataSet getListTauDanger(string taus);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITauthuyenService/getListTauDanger", ReplyAction="http://tempuri.org/ITauthuyenService/getListTauDangerResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> getListTauDangerAsync(string taus);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -181,6 +199,30 @@ namespace boat.TauService {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> layChitietTauAsync(string matau) {
             return base.Channel.layChitietTauAsync(matau);
+        }
+        
+        public System.Data.DataSet layVitriCuoi(string matau) {
+            return base.Channel.layVitriCuoi(matau);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> layVitriCuoiAsync(string matau) {
+            return base.Channel.layVitriCuoiAsync(matau);
+        }
+        
+        public System.Data.DataSet layVitriCuoiAll() {
+            return base.Channel.layVitriCuoiAll();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> layVitriCuoiAllAsync() {
+            return base.Channel.layVitriCuoiAllAsync();
+        }
+        
+        public System.Data.DataSet getListTauDanger(string taus) {
+            return base.Channel.getListTauDanger(taus);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> getListTauDangerAsync(string taus) {
+            return base.Channel.getListTauDangerAsync(taus);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace boat.GUI
 
         private void frmDanhSachTau_Load(object sender, EventArgs e)
         {
-            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+            gmap.MapProvider = GMap.NET.MapProviders.BingMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gmap.ShowCenter = false;
             gmap.DisableFocusOnMouseEnter = true;

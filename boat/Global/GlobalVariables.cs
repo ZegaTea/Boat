@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using boat.Model.DTO;
+using System.Collections.Concurrent;
 
 namespace boat.Global
 {
@@ -16,5 +17,9 @@ namespace boat.Global
         public static Dictionary<string, int> mapHanhTrinhCu = new Dictionary<string, int>();
 
         public static string messageStates = "-----------------------\n";
+
+        public static ConcurrentDictionary<string, int> mapHanhtrinhBao = new ConcurrentDictionary<string, int>();
+
+        public static ConcurrentDictionary<string, LatLng> mapHanhtrinhBaoCu = new ConcurrentDictionary<string, LatLng>();
     }
 }

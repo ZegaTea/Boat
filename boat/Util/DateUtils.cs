@@ -13,10 +13,17 @@ namespace boat.Util
             return (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
         }
 
+        
         public static string getDateTime(long milis)
         {
             var y = DateTime.SpecifyKind(new DateTime(1970, 1, 1), DateTimeKind.Local).AddMilliseconds(milis + (3600000 * 7));
             return y.ToString("yyyy-MM-dd  HH:mm:ss");
         }
+
+        public static long convertToTimeMilis(DateTime datetime)
+        {
+            return (long)(datetime - new DateTime(1970, 1, 1)).TotalMilliseconds;
+        }
+
     }
 }

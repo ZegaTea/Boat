@@ -38,5 +38,11 @@ namespace BoatService.Service.tu
         DataSet layVitriFull(string matau);
         [OperationContract]
         DataSet layChitietTau(string matau);
+        [OperationContract]
+        DataSet layVitriCuoi(string matau);
+        [OperationContract]
+        DataSet layVitriCuoiAll();
+        [OperationContract]
+        DataSet getListTauDanger(string taus);
     }
 }
