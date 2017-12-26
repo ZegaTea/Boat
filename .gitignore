@@ -309,3 +309,10 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+*.exe
+boat/bin/Debug/boat.pdb
+boat/obj/Debug/boat.pdb
+boat/obj/Debug/boat.exe
+boat/obj/Debug/boat.csproj.GenerateResource.Cache
+BoatService/db/ConnectDB.cs
+BoatService/db/Tuan_dv_DataAccess.cs
