@@ -12,7 +12,6 @@ E:\Code-C#\boat\boat\obj\Debug\boat.csproj.GenerateResource.Cache
 E:\Code-C#\boat\boat\obj\Debug\boat.exe
 E:\Code-C#\boat\boat\obj\Debug\boat.pdb
 E:\Code-C#\boat\boat\obj\Debug\boat.frmMain.resources
-E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmDanhSachTau.resources
 E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanlyLoaitau.resources
 E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanlyQuocgia.resources
 E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanlyTau.resources
@@ -23,3 +22,4 @@ E:\Code-C#\boat\boat\obj\Debug\boat.GUI.LinhGUI.frmHanhTrinh.resources
 E:\Code-C#\boat\boat\obj\Debug\boat.GUI.LinhGUI.frmThemConBao.resources
 E:\Code-C#\boat\boat\obj\Debug\boat.GUI.LinhGUI.frmQuanLyViTri.resources
 E:\Code-C#\boat\boat\obj\Debug\boat.GUI.LinhGUI.ThemViTriBao.resources
+E:\Code-C#\boat\boat\obj\Debug\boat.GUI.frmQuanly.resources

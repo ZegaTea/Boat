@@ -119,8 +119,8 @@
             this.quanlyTSMI.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.quanlyTSMI.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.quanlyTSMI.Name = "quanlyTSMI";
-            this.quanlyTSMI.Size = new System.Drawing.Size(80, 69);
-            this.quanlyTSMI.Text = "Quản lý tàu";
+            this.quanlyTSMI.Size = new System.Drawing.Size(60, 69);
+            this.quanlyTSMI.Text = "Quản lý";
             this.quanlyTSMI.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.quanlyTSMI.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.quanlyTSMI.Click += new System.EventHandler(this.quanlyTSMI_Click);

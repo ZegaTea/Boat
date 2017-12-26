@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BoatService.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BoatService.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="loaitau">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="kieutau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tauthuyens" nillable="true" type="tns:ArrayOftauthuyen" />
+      <xs:element minOccurs="0" name="tenloaitau" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="loaitau" nillable="true" type="tns:loaitau" />
+  <xs:complexType name="ArrayOftauthuyen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tauthuyen" nillable="true" type="tns:tauthuyen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftauthuyen" nillable="true" type="tns:ArrayOftauthuyen" />
+  <xs:complexType name="tauthuyen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MMSI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hanhtrinhs" nillable="true" type="tns:ArrayOfhanhtrinh" />
+      <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loaitau" nillable="true" type="tns:loaitau" />
+      <xs:element minOccurs="0" name="ma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maloaitau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maquocgia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="quocgia" nillable="true" type="tns:quocgia" />
+      <xs:element minOccurs="0" name="taitrong" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="tentau" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tauthuyen" nillable="true" type="tns:tauthuyen" />
+  <xs:complexType name="ArrayOfhanhtrinh">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="hanhtrinh" nillable="true" type="tns:hanhtrinh" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfhanhtrinh" nillable="true" type="tns:ArrayOfhanhtrinh" />
+  <xs:complexType name="hanhtrinh">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ma" type="xs:int" />
+      <xs:element minOccurs="0" name="matauthuyen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tauthuyen" nillable="true" type="tns:tauthuyen" />
+      <xs:element minOccurs="0" name="trangthai" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="vitritauthuyens" nillable="true" type="tns:ArrayOfvitritauthuyen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="hanhtrinh" nillable="true" type="tns:hanhtrinh" />
+  <xs:complexType name="ArrayOfvitritauthuyen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vitritauthuyen" nillable="true" type="tns:vitritauthuyen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvitritauthuyen" nillable="true" type="tns:ArrayOfvitritauthuyen" />
+  <xs:complexType name="vitritauthuyen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hanhtrinh" nillable="true" type="tns:hanhtrinh" />
+      <xs:element minOccurs="0" name="kinhdo" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="ma" type="xs:int" />
+      <xs:element minOccurs="0" name="mahanhtrinh" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="thoigian" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="vido" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vitritauthuyen" nillable="true" type="tns:vitritauthuyen" />
+  <xs:complexType name="quocgia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tauthuyens" nillable="true" type="tns:ArrayOftauthuyen" />
+      <xs:element minOccurs="0" name="tenquocgia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="quocgia" nillable="true" type="tns:quocgia" />
+</xs:schema>

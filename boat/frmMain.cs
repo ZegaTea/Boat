@@ -66,7 +66,7 @@ namespace boat
             List<TauVItriDTO> lst = con.convertTauVitri(tauBus.danhSachTau().Tables[0]);
             List<BaoVitriDTO> lstBao = con.convertBaoVitri(baoBus.getListNewestBao().Tables[0]);
 
-
+            lstTauDanger = new List<string>();
 
             //GMapMarker mark = new GMarkerGoogle(new PointLatLng(11.999697, 113.148193), GMarkerGoogleType.blue_pushpin);
             GMapMarker mark;
@@ -299,7 +299,7 @@ namespace boat
         {
 
             this.Visible = false;
-            frmDanhSachTau frm = new frmDanhSachTau();
+            frmQuanly frm = new frmQuanly();
             frm.ShowDialog();
             this.Visible = true;
         }
@@ -418,13 +418,25 @@ namespace boat
         private void dgvTauDanger_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
-            if(senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-                string msg = "\nGửi cảnh báo đến tàu " + dgvTauDanger.Rows[e.RowIndex].Cells[0].Value.ToString() +" thành công"
-                    +"\nThời gian: " + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")
-                    +"\n--------------";
-                rtbWarning.Text += msg;
+                if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+                {
+                    string msg = "\nGửi cảnh báo đến tàu " + dgvTauDanger.Rows[e.RowIndex].Cells[0].Value.ToString() + " thành công"
+                        + "\nThời gian: " + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")
+                        + "\n--------------";
+                    rtbWarning.Text += msg;
+                }
+                else
+                {
+                    DataSet ds = tauBus.layVitriCuoi(dgvTauDanger.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    double vi = ds.Tables[0].Rows[0].Field<double>("vido");
+                    double ki = ds.Tables[0].Rows[0].Field<double>("kinhdo");
+                    gmap.Position = new GMap.NET.PointLatLng(vi, ki);
+                    gmap.Zoom = 10;
+                }
             }
+
         }
 
         private void rtbWarning_TextChanged(object sender, EventArgs e)
